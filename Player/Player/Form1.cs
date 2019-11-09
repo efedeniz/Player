@@ -11,6 +11,7 @@ using System.Timers;
 using System.Windows.Forms;
 using Player.Controller;
 using Timer = System.Windows.Forms.Timer;
+using Microsoft.Win32;
 
 namespace Player
 {
@@ -34,6 +35,9 @@ namespace Player
         public Form1()
         {
             InitializeComponent();
+
+            RegistryKey registry = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+            registry.SetValue("Player", Application.ExecutablePath.ToString());
         }
 
       
@@ -71,24 +75,26 @@ namespace Player
                 crtlPressed = true;
 
             }
+
+            Console.Write(key);
           
 
             if (crtlPressed)
             {
                 
 
-                if (key.Equals("W"))
+                if (key.Equals("Up"))
                 {
                     playPause();
                     crtlPressed = false;
 
                 }
-                else if (key.Equals("Q"))
+                else if (key.Equals("Left"))
                 {
                     prevTrack();
                     crtlPressed = false;
                 }
-                else if (key.Equals("E"))
+                else if (key.Equals("Right"))
                 {
                     nextTrack();
                     crtlPressed = false;
