@@ -1,0 +1,8 @@
+C:\Users\efede\source\repos\Player\Player\bin\Debug\Player.exe.config
+C:\Users\efede\source\repos\Player\Player\bin\Debug\Player.exe
+C:\Users\efede\source\repos\Player\Player\bin\Debug\Player.pdb
+C:\Users\efede\source\repos\Player\Player\obj\Debug\Player.Properties.Resources.resources
+C:\Users\efede\source\repos\Player\Player\obj\Debug\Player.csproj.GenerateResource.cache
+C:\Users\efede\source\repos\Player\Player\obj\Debug\Player.exe
+C:\Users\efede\source\repos\Player\Player\obj\Debug\Player.pdb
+C:\Users\efede\source\repos\Player\Player\obj\Debug\Player.Form1.resources
