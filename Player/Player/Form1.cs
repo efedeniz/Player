@@ -38,6 +38,18 @@ namespace Player
 
             RegistryKey registry = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
             registry.SetValue("Player", Application.ExecutablePath.ToString());
+
+            this.ShowInTaskbar = false;
+            notifyIcon1.Icon = SystemIcons.Application;
+            notifyIcon1.Visible = true;
+            this.WindowState = FormWindowState.Minimized;
+
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                
+            }
+       
+         
         }
 
       
@@ -131,6 +143,19 @@ namespace Player
         private void button2_Click(object sender, EventArgs e)
         {
             nextTrack();
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                this.ShowInTaskbar = true;
+                notifyIcon1.Icon = SystemIcons.Application;
+                notifyIcon1.Visible = false;
+                this.WindowState = FormWindowState.Normal;
+            }
         }
     }
 
